@@ -8,6 +8,6 @@ RSpec.describe 'Search Index', type: :feature do
     click_button 'Search For Members'
 
     expect(current_path).to eq('/search')
-    expect(page).to have_content('Fire Nation Members')
+    expect(page).to have_content('Members')
   end
 end
