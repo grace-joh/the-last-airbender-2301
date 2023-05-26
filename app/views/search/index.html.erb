@@ -1,0 +1,21 @@
+<header>
+  <h1>Members</h1>
+</header>
+
+<div class='total-results'>
+  <h2>Total: <%= @members.count %></h2>
+</div>
+
+<div class='members-list'>
+  <% @members[0..24].each do |member| %>
+    <div class='member'>
+      <h3><%= member.name %><h3>
+      <img src="<%= member.photo_url %>" alt="<%= member.name %>" height="200">
+      <ul>
+        <li>Allies: <%= member.allies.present? ? member.allies : 'None' %></li>
+        <li>Enemies: <%= member.enemies.present? ? member.enemies : 'None'  %></li>
+        <li>Affiliation: <%= member.affiliation.present? ? member.affiliation : 'None'  %></li>
+      </ul>
+    </div>
+  <% end %>
+</div>
